@@ -1,25 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Container from 'react-bootstrap/Container'
+import Buttom from 'react-bootstrap/Button'
+import Home from './view/Home'
+import Ajuda from './view/Ajuda'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+
+
+const containerStyle = {
+  paddingLeft: '0px',
+  paddingRight: '0px',
+  marginLeft: '0px',
+  marginRight: '0px'
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Container fluid className="App" style={ containerStyle }>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path='/ajuda'>
+            <Ajuda />
+          </Route>
+        </Switch>
+      </Router>
+    </Container>
   );
 }
 
