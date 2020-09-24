@@ -1,10 +1,6 @@
 .App {
-  background-image: url(https://www.scdn.co/i/home/lieVariants/bursts.svg);
-  background-position-x: 46%;
-  background-position-y: 4%;
-  background-size: 176%;
-  background-repeat: no-repeat;
-  overflow: hidden;
+  -webkit-box-pack: center;
+  justify-content: center;
   min-height: 846px;
 }
 
@@ -12,10 +8,38 @@
   height: 80px;
 }
 
-.Rodape {
-  margin-top: 52%;
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.Menu {
   background-color: black;
-  padding-top: 80px;
-  padding-bottom: 50px;
+  position: sticky;
   display: block;
+  width: 100%;
+  left:0;
+  top:0;
+}
+
+.Rodape {
+  background-color: black;
+  margin-top: 10%;
+  display: block;
+  width: 100%;  
+  left:0;
+  bottom: 0;
+}
+
+.ConteudoHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.ConteudoHome h4 {
+  color: #1ED760;
+  font-size: 18px;
+  margin-left: 6%;
 }

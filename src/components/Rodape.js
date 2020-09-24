@@ -3,20 +3,23 @@ import Container from 'react-bootstrap/esm/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from  'react-bootstrap/Button'
+import { Link } from 'react-router-dom'
 import spotify_logo from '../images/spotify_logo.png'
 
 function Rodape() {
     const listaEmpresa = ["Sobre", "Empregos", "For the Record"]
     const listaComunidades = ["Para Artistas", "Desenvolvedores", "Marcas", "Investidores", "Fornecedores"]
     const listaLinksUnicos = [ "Ajuda", "Player da Web", "Aplicativo móvel grátis" ]
+    const data = new Date()
 
     return (
-        <Container fluid>
+        <Container className="ConteudoRodape">
             <Row>
-                <Col md="3">
-                    <Button variant='black'>
+                <Col md="3" style={{ marginTop: "18px" }}>
+                    <Link to="/" style={{color: "white", textDecoration: 'none'}}>
                         <img src={spotify_logo} />
-                    </Button>
+                    </Link>
+                    {data.getDate() + "/" + (data.getMonth() + 1) + "/" + data.getFullYear()}
                 </Col>
                 <Col md='3' style={{ marginTop: "18px" }}>
                     <h5 style={{color: "grey"}}>Empresa</h5>

@@ -7,16 +7,6 @@ import Col from 'react-bootstrap/Col'
 function Ajuda() {
     return (
         <>
-            <Row className='Menu'>
-                <Col md='12'>
-                    <Menu />
-                </Col>
-            </Row>
-            <Row className='Rodape'>
-                <Col>
-                    <Rodape />
-                </Col>
-            </Row>
         </>
     )
 }

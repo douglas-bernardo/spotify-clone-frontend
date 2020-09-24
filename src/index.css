@@ -1,10 +1,16 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://www.scdn.co/i/home/lieVariants/bursts.svg);
+  background-position-x: 46%;
+  background-position-y: 4%;
+  background-size: 175%;
+  background-repeat: no-repeat;
 }
 
 code {
