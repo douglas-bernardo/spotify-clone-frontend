@@ -1,7 +1,20 @@
 .App {
   -webkit-box-pack: center;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+  padding-right: 0px;
+  justify-content: space-between;
   min-height: 846px;
+}
+
+.backgroundHome {
+  background-image: url(https://www.scdn.co/i/home/lieVariants/bursts.svg);
+  background-position-x: 46%;
+  background-position-y: 4%;
+  background-size: 175%;
+  background-repeat: no-repeat;
+  background-color: #2D46B9;
 }
 
 .navbar {
@@ -20,11 +33,15 @@
   width: 100%;
   left:0;
   top:0;
+  z-index: 10;
+}
+
+.containerDefault {
+  height: 100vh;
 }
 
 .Rodape {
   background-color: black;
-  margin-top: 10%;
   display: block;
   width: 100%;  
   left:0;
@@ -41,5 +58,14 @@
 .ConteudoHome h4 {
   color: #1ED760;
   font-size: 18px;
-  margin-left: 6%;
+}
+
+.backgroundFaq {
+  background-image: url(https://support.scdn.co/web/_next/static/assets/ef7fb47/search-desktop.webp);
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.ConteudoFaq {
+  color: white;
 }

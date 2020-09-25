@@ -31,10 +31,14 @@ function App() {
         </Row>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <div className='containerDefault backgroundHome'>
+              <Home />
+            </div>
           </Route>
           <Route exact path='/ajuda'>
-            <Ajuda />
+            <div className='containerDefault backgroundFaq'>
+              <Ajuda />
+            </div>
           </Route>
         </Switch>
         <Row className='Rodape'>
