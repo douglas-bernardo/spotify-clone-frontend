@@ -69,3 +69,19 @@
 .ConteudoFaq {
   color: white;
 }
+
+.card-header{
+  background-color: black;
+}
+
+.card-header button {
+   color: white;
+}
+
+.card-body{
+  color: black;
+}
+
+.card{
+  border-style: none;
+}
