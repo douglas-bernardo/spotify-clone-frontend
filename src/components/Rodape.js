@@ -2,7 +2,6 @@ import React from 'react'
 import Container from 'react-bootstrap/esm/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Button from  'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
 import spotify_logo from '../images/spotify_logo.png'
 
@@ -17,7 +16,7 @@ function Rodape() {
             <Row>
                 <Col md="3" style={{ marginTop: "18px" }}>
                     <Link to="/" style={{color: "white", textDecoration: 'none'}}>
-                        <img src={spotify_logo} />
+                        <img src={spotify_logo} alt={''}/>
                     </Link>
                     {data.getDate() + "/" + (data.getMonth() + 1) + "/" + data.getFullYear()}
                 </Col>
