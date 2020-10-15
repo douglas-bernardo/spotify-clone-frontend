@@ -1,40 +1,64 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import api from '../../services/api';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container as ContainerBootstrap, Table} from 'react-bootstrap';
 
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
+
 import { Container, MainViewPlayList } from '../../components/Container';
 import { ContainerMain, Banner, Musics, ActionBar } from './styles';
-import Icon from '../../components/Icons/play';
 import SideBar from '../../components/SideBar';
 
-export default class  Playlist extends Component {
+export default class Playlist extends Component {
+  
   state = {
-    playlist: {}
+    playlist: {},
+    play: false,
+    currentIdStream: null,
+    currentStreamAudio: '',
+    player: null
   }
 
   async componentDidMount(){
     const { match } = this.props;
     const playlist_id = match.params.id;
-
+    
     const { data } = await api.get(`/playlists/${playlist_id}`);
     this.setState({
-      playlist: data
+      playlist: data,
+      player: createRef()
     });
 
   }
+
+  togglePlay = (val, track) => {
+
+    this.setState({ 
+        play: !this.state.play, 
+        currentIdStream: val, 
+        currentStreamAudio: track 
+      }, ()=>{
+        this.audiofunction();
+      });
+  }
+
+  audiofunction = () => {
+    console.log(this.state.player.current.audio.current.currentTime);
+    this.state.play ? this.state.player.current.audio.current.play() : this.state.player.current.audio.current.pause(); 
+  };
+  
   
   render() {
 
     const { playlist } = this.state;
-    const { musicas } = playlist;   
+    const { musicas } = playlist;
 
     return(
       <Container>
         <SideBar/>
         <MainViewPlayList>
-
           <ContainerMain>
 
               <Banner>
@@ -46,12 +70,16 @@ export default class  Playlist extends Component {
                 </div>
               </Banner>
               <ActionBar>
-
-                <button>
-                  <Icon/>
-                </button>
+              
+              <AudioPlayer
+                autoPlayAfterSrcChange={false}                
+                src={this.state.currentStreamAudio}
+                onPlay={e => console.log("onPlay")}
+                ref={this.state.player}
+              />
 
               </ActionBar>
+              
               <Musics>
                 <ContainerBootstrap fluid>
                   <Table hover variant="dark" id="table-music">
@@ -66,11 +94,11 @@ export default class  Playlist extends Component {
                     <tbody>
                       {(musicas) &&
                         musicas.map(m =>(
-                          <tr key={m.id}>
+                          <tr key={m.id} onClick={() => this.togglePlay(m.id, m.url_audio)}>
                             <td>{m.id}</td>
                             <td>{m.nome}</td>
                             <td>{m.cantor}</td>
-                            <td>{m.duracao}</td>
+                            <td>{(this.state.play && m.id === this.state.currentIdStream) ? <span id="status_music">Reproduzindo...</span> : m.duracao}</td>  
                           </tr>
                         ))}
                     </tbody>
@@ -79,7 +107,6 @@ export default class  Playlist extends Component {
               </Musics>
 
           </ContainerMain>
-
         </MainViewPlayList>
       </Container>
     );

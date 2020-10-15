@@ -6,7 +6,7 @@ import burstsTablet from '../../assets/svg/bursts-tablet.svg';
 export const Section = styled.section`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 90vh;
   text-align: center;
   align-items: center;
   .content{

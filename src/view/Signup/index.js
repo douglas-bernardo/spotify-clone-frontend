@@ -1,9 +1,13 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { Section } from './styles';
 
 function Signup() {
-  return <h1>Inscrição</h1>;
+  return (
+    <Section>
+      
+    </Section>
+  );
 }
 
 export default Signup;

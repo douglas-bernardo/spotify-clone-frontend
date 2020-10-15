@@ -6,8 +6,6 @@ export const ContainerMain = styled.div`
     margin: 32px 32px;
     color: #FFF;
 
-
-
     .musicas{
         grid-column: 1/-1;
         padding: 10px 10px;
@@ -58,6 +56,11 @@ export const Musics = styled.div`
     grid-column: 1/-1;
     padding: 10px 10px;
     color: #FFF;
+
+    #status_music{
+        color: #1db954;
+    }
+
 `;
 
 export const ActionBar = styled.div`
@@ -66,7 +69,7 @@ export const ActionBar = styled.div`
     color: #FFF;
 
     button{
-        --size: 56px;
+        /* --size: 56px;
         margin-right: 32px;
         color: #fff;
         background-color: #1db954;
@@ -78,7 +81,7 @@ export const ActionBar = styled.div`
         align-items: center;
         height: var(--size);
         width: var(--size);
-        min-width: var(--size);
+        min-width: var(--size); */
 
     }
 `;

@@ -34,7 +34,7 @@ export default class Playlists extends Component {
                         </div>
                         <div className="list-genero">
                             {list.map(item =>(
-                                <Link to={`/playlist/${item.id}`} key={item.id}>
+                                <Link to={`/playlist/${item.id}`} title={item.descricao} key={item.id}>
                                     <Item key={item.id}>
                                         <div>
                                             <img src={item.capa} alt={''}/>

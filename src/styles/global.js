@@ -26,6 +26,19 @@ export default createGlobalStyle`
         background: #1f1f1f;
     }
 
-    
 
+    ${'' /* custom react-h5-audio-player */}
+    .rhap_container {
+        background: #1f1f1f;
+    }
+
+    #rhap_current-time{
+        color: #868686;
+    }
+
+    .rhap_total-time{
+        color: #868686;
+    }
+
+    
 `;

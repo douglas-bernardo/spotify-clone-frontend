@@ -10,19 +10,22 @@
                     "id": "1",
                     "nome": "Gimme Shelter",
                     "cantor": "The Rolling Stones",
-                    "duracao": "04:30"
+                    "duracao": "04:30",
+                    "url_audio": "/audios/The Rolling Stones - Gimme Shelter.mp3"
                 },
                 {
                     "id": "2",
-                    "nome": "Sympathy For The Devil - 50th Anniversary Edition",
+                    "nome": "Start Me Up",
                     "cantor": "The Rolling Stones",
-                    "duracao": "06:18"
+                    "duracao": "03:33",
+                    "url_audio": "/audios/The Rolling Stones -  Start Me Up.mp3"
                 },
                 {
                     "id": "3",
                     "nome": "Living In A Ghost Town",
                     "cantor": "The Rolling Stones",
-                    "duracao": "04:07"
+                    "duracao": "04:07",
+                    "url_audio": "/audios/The Rolling Stones - Living In A Ghost Town.mp3"
                 }
             ]
         },
@@ -36,19 +39,22 @@
                     "id": "1",
                     "nome": "Paradise City",
                     "cantor": "Guns N' Roses",
-                    "duracao": "04:30"
+                    "duracao": "04:30",
+                    "url_audio": "/audios/Guns N Roses - Paradise City.mp3"
                 },
                 {
                     "id": "2",
                     "nome": "Knockin' On Heaven's Door",
                     "cantor": "Guns N' Roses",
-                    "duracao": "06:18"
+                    "duracao": "06:18",
+                    "url_audio": "/audios/Guns N Roses - Knockin On Heavens Door.mp3"
                 },
                 {
                     "id": "3",
                     "nome": "Sweet Child O' Mine",
                     "cantor": "Guns N' Roses",
-                    "duracao": "04:07"
+                    "duracao": "04:07",
+                    "url_audio": "/audios/Guns N Roses - Sweet Child O Mine.mp3"
                 }
             ]
         },
@@ -62,19 +68,22 @@
                     "id": "1",
                     "nome": "Tempo Perdido",
                     "cantor": "Legião Urbana",
-                    "duracao": "04:30"
+                    "duracao": "04:30",
+                    "url_audio": "/audios/Legião Urbana - Tempo Perdido.mp3"
                 },
                 {
                     "id": "2",
                     "nome": "Índios",
                     "cantor": "Legião Urbana",
-                    "duracao": "06:18"
+                    "duracao": "06:18",
+                    "url_audio": "/audios/Legião Urbana - Índios.mp3"
                 },
                 {
                     "id": "3",
                     "nome": "Pais e Filhos",
                     "cantor": "Legião Urbana",
-                    "duracao": "04:07"
+                    "duracao": "04:07",
+                    "url_audio": "/audios/Legião Urbana - Pais E Filhos.mp3"
                 }
             ]
         },
@@ -88,19 +97,22 @@
                     "id": "1",
                     "nome": "Here Comes The Sun",
                     "cantor": "The Beatles",
-                    "duracao": "04:30"
+                    "duracao": "04:30",
+                    "url_audio": "/audios/The Beatles - Here Comes The Sun.mp3"
                 },
                 {
                     "id": "2",
                     "nome": "Hey Jude",
                     "cantor": "The Beatles",
-                    "duracao": "06:18"
+                    "duracao": "06:18",
+                    "url_audio": "/audios/The Beatles - Hey Jude.mp3"
                 },
                 {
                     "id": "3",
                     "nome": "Come Together",
                     "cantor": "The Beatles",
-                    "duracao": "04:07"
+                    "duracao": "04:07",
+                    "url_audio": "/audios/The Beatles - Come Together.mp3"
                 }
             ]
         }

@@ -2,11 +2,11 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Accordion, Card, Button, Container } from 'react-bootstrap'
 
-import './styles.css';
+import { Section } from './styles';
 
 function Help() {
     return (
-        <>
+        <Section>
             <Container className="ConteudoFaq text-center">
                 <h1 style={{marginTop: '10%'}}>Como Podemos Ajudar ?</h1>
                 <Accordion defaultActiveKey="0">
@@ -62,7 +62,7 @@ function Help() {
 
                 </Accordion>
             </Container>
-        </>
+        </Section>
     )
 }
 

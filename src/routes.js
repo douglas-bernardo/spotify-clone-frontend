@@ -1,14 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './view/Home';
+import Header    from './components/Header';
+import Footer    from './components/Footer';
+import Home      from './view/Home';
 import Playlists from './view/Playlists';
-import Playlist from './view/Playlist';
-import Signup from './view/Signup';
-import Help from './view/Help';
-
+import Playlist  from './view/Playlist';
+import Signup    from './view/Signup';
+import Help      from './view/Help';
 
 export default function Routes() {
     return(
