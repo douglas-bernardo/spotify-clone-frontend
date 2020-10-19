@@ -69,6 +69,7 @@ export default class Playlist extends Component {
                   <p>{playlist.descricao}</p>
                 </div>
               </Banner>
+              
               <ActionBar>
               
               <AudioPlayer
