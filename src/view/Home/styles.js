@@ -17,13 +17,13 @@ export const Section = styled.section`
             /* responsive */
             @media (min-width: 768px) {
                 color: #1ED760;
-                font-size: 104px;
+                font-size: 90px;
                 margin-bottom: 40px;
             }
 
             @media (min-width: 1200px) {
                 color: #1ED760;
-                font-size: 156px;
+                font-size: 142px;
                 line-height: 166px;
                 margin-bottom: 40px;
                 width: 800px;
