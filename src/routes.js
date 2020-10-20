@@ -12,7 +12,9 @@ import Help      from './view/Help';
 export default function Routes() {
     return(
         <BrowserRouter>
+            {/* componentes fixos */}
             <Header/>
+                {/* componentes mutaveis */}
                 <Switch>
                     <Route path="/" exact component={Home} />
                     <Route path="/playlists" component={Playlists} />

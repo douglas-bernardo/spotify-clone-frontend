@@ -120,13 +120,19 @@
   "users": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "email": "json.server.test@mailtest.com",
+      "nickname": "json.server",
+      "password": "json.server",
+      "birthday": "2020-01-01",
+      "gender": "NB"
     },
     {
-      "id": 2,
-      "title": "teste-json-server",
-      "author": "typicode"
+      "email": "jkdouglas21@gmail.com",
+      "nickname": "",
+      "password": "jkdouglas21@gmail.com",
+      "birthday": "2020-10-20",
+      "gender": "M",
+      "id": 2
     }
   ]
 }
