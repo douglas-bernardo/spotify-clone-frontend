@@ -6,9 +6,8 @@ import { HeaderMenu, Nav } from './styles';
 
 function Header (){
     return(
-        <HeaderMenu>            
+        <HeaderMenu>     
             <div className="headerContainer">
-
                 <div className="headerBrand">
                     <Link to="/">
                         <img src={spotify_logo} alt={''}/>
@@ -21,6 +20,7 @@ function Header (){
                         <li><Link to="/help">Ajuda</Link></li>
                         <li className="separator">|</li>
                         <li><Link to="/signup">Inscreva-se</Link></li>
+                        <li><Link to="/signup">Entrar</Link></li>
                     </ul>
                 </Nav>
 

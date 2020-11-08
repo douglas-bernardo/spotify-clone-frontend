@@ -48,7 +48,7 @@ export const Section = styled.section`
         }
     }
 
-    .form_signup .SugnupButton {
+    .form_signup .SignupButton {
         display: flex;
         justify-content: space-around;
         margin-bottom: 24px;
