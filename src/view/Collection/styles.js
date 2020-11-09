@@ -12,7 +12,6 @@ export const List =  styled.div`
     max-width: 1955px;
 `;
 
-
 export const PlaylistRow =  styled.section`
     display: flex;
     flex-direction: column;

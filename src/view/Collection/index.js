@@ -1,55 +1,51 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import api from '../../services/api';
 
 import { Container, MainViewPlayList } from '../../components/Container';
 import SideBar from '../../components/SideBar';
+import api from '../../services/api';
 
 import { List, PlaylistRow, Item } from './styles';
 
-export default class Playlists extends Component {
+export default function Collection() {
 
-    state = {
-        list: []
-    }
-    
-    async componentDidMount(){
-        const { data } = await api.get('/playlists');
-        this.setState({
-            list: data
+    const [collection, setCollection] = useState([]);
+
+    useEffect(() => {
+        api.get('/playlists', {
+            params: { owner_id: 1 }
+        }).then(response => {
+            setCollection(response.data);
         });
-    }
+    }, []);
 
-    render(){
-        const { list } = this.state;        
-        return(                   
-            <Container>
-            <SideBar/>
+    return (
+        <Container>
+            <SideBar />
             <MainViewPlayList>
-                
+
                 <List className="list">
                     <PlaylistRow className="playlistrow">
                         <div className="genero">
-                            <h1>Lendas do Rock</h1>
+                            <h1>Suas playlists estão aqui</h1>
                         </div>
                         <div className="list-genero">
-                            {list.map(item =>(
+                            {collection.map(item => (
                                 <Link to={`/playlist/${item.id}`} title={item.descricao} key={item.id}>
                                     <Item key={item.id}>
                                         <div>
-                                            <img src={item.capa} alt={''}/>
+                                            <img src={item.capa} alt={''} />
                                             <h3>{item.nome}</h3>
                                             <small>{item.descricao}</small>
                                         </div>
                                     </Item>
                                 </Link>
-                            ))}                              
+                            ))}
                         </div>
                     </PlaylistRow>
-                </List>  
+                </List>
 
             </MainViewPlayList>
-            </Container>         
-        );       
-    }
+        </Container>
+    );
 }

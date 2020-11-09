@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import * as Yup from 'yup';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container as ContainerBootstrap, Form, Row } from 'react-bootstrap';
 import api from '../../services/api';
-
 
 import Logo from '../../components/Icons/Logo';
 import { Section } from './styles';
@@ -12,6 +10,7 @@ import { Link } from 'react-router-dom';
 
 export default function Signup() {
 
+  //equivalente aos estados no modelo anterior
   const [email, setEmail] = useState('');
   const [email_confirm, setEmailConfirm] = useState('');
   const [password, setPassword] = useState('');
@@ -19,7 +18,7 @@ export default function Signup() {
   const [birthday, setBirthday] = useState('');
   const [gender, setGender] = useState('');
   const [radioButton, setRadioButton] = useState(false);
-
+ 
   async function handleSubmit(e) {
     e.preventDefault();
 
@@ -37,7 +36,6 @@ export default function Signup() {
       gender: gender
     }
 
-
     await api.post('users', data);
 
     setEmail('');
@@ -48,20 +46,17 @@ export default function Signup() {
     setGender('');
 
     alert('Cadastro realizado com sucesso!');
-
+    
   }
 
 
-  function onClickAvailability(e) {
-    
+  function onClickAvailability(e) {    
     setGender(e.target.value);
     setRadioButton(true);
-
     console.log(e.target.value);
+  } 
 
-  }  
     return (
-
       <Section>
         <div className="headerSignup">
           <Link to={''}>
@@ -139,12 +134,11 @@ export default function Signup() {
               <Form.Check value="NB" type="radio" name="formHorizontalRadios" label="Não Binário" id="formHorizontalRadios3" checked={gender === "NB" && radioButton} onChange={onClickAvailability} />
             </Form.Group>
 
-            <div className="SugnupButton">
+            <div className="SignupButton">
               <button type="submit">
                 Inscreva-se 
-            </button>
+              </button>
             </div>
-
           </Form>
         </ContainerBootstrap>
       </Section>

@@ -24,17 +24,17 @@ export default class Playlist extends Component {
   async componentDidMount(){
     const { match } = this.props;
     const playlist_id = match.params.id;
-    
+
+    // pega as informações da api via get 
     const { data } = await api.get(`/playlists/${playlist_id}`);
+
     this.setState({
       playlist: data,
       player: createRef()
     });
-
   }
 
   togglePlay = (val, track) => {
-
     this.setState({ 
         play: !this.state.play, 
         currentIdStream: val, 
@@ -47,8 +47,7 @@ export default class Playlist extends Component {
   audiofunction = () => {
     console.log(this.state.player.current.audio.current.currentTime);
     this.state.play ? this.state.player.current.audio.current.play() : this.state.player.current.audio.current.pause(); 
-  };
-  
+  };  
   
   render() {
 
