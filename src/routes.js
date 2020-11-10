@@ -7,19 +7,28 @@ import Home      from './view/Home';
 import Playlists from './view/Playlists';
 import Playlist  from './view/Playlist';
 import Signup    from './view/Signup';
+import Signin    from './view/Signin' 
 import Help      from './view/Help';
+import { useEffect } from 'react';
+import { useLocalStorage } from './view/Signin/localStorage'
 
 export default function Routes() {
+    const [user, setUser] = useLocalStorage("@spotify/user", "")
+    console.log(user)
     return(
         <BrowserRouter>
             {/* componentes fixos */}
-            <Header/>
+            <Header 
+                user={user}
+                logout={setUser}
+            />
                 {/* componentes mutaveis */}
                 <Switch>
                     <Route path="/" exact component={Home} />
                     <Route path="/playlists" component={Playlists} />
                     <Route path="/playlist/:id" component={Playlist} />
                     <Route path="/signup" component={Signup} />
+                    <Route path="/signin" render={props => <Signin {...props} login={setUser} />} />
                     <Route path="/help" component={Help} />
                 </Switch>
             <Footer/>
