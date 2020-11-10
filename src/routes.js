@@ -24,12 +24,14 @@ export default function Routes() {
             />
                 {/* componentes mutaveis */}
                 <Switch>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/playlists" component={Playlists} />
-                    <Route path="/playlist/:id" component={Playlist} />
+                    <Route path="/" exact component={Home} />                                    
                     <Route path="/signup" component={Signup} />
                     <Route path="/signin" render={props => <Signin {...props} login={setUser} />} />
                     <Route path="/help" component={Help} />
+                    <Route path="/playlist/create" component={PlaylistCreate} />
+                    <Route path="/playlist/:id" component={Playlist} />
+                    <Route path="/playlists" component={Playlists} />
+                    <Route path="/collection" component={Collection} />
                 </Switch>
             <Footer/>
         </BrowserRouter>

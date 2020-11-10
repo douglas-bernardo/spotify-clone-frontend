@@ -5,7 +5,7 @@ import iSearch from '../../assets/svg/search.svg';
 import iLibrary from '../../assets/svg/library.svg';
 
 /** Menu Lateral */
-export const Aside =  styled.aside`
+export const Aside = styled.aside`
     display:flex;
     justify-content:center;
     background: #000000;
@@ -38,7 +38,7 @@ export const IconLibrary = styled.div`
     height: 24px;
 `;
 
-export const SideMenu =  styled.ul`
+export const SideMenu = styled.ul`
     list-style: none;
     
     li{
@@ -60,6 +60,17 @@ export const SideMenu =  styled.ul`
 
     li:hover{
         background-color: #999;
+    }
+
+    #svgCreatePlaylist{
+        margin-right: 16px;
+        background: #fff;
+        width: 32px;
+        height: 32px;
+        padding: 4px;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        fill: #000;
     }
 
 `;

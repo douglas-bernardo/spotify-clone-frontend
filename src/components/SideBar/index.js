@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom';
 import { Aside, 
          SideMenu, 
          IconHome,
-         IconSearch,
-         IconLibrary } from './styles';
+         IconLibrary,
+         IconSearch } from './styles';
+
+import LogoCreatePlaylist from '../../components/Icons/LogoCreatePlaylist';
 
 function SideBar() {
   return (
@@ -24,8 +26,17 @@ function SideBar() {
             </li>
             <li>
                 <IconLibrary/>
-                Sua Biblioteca
+                <Link to="/collection">
+                    Sua Biblioteca
+                </Link>                
             </li>
+            <li>
+                <LogoCreatePlaylist/>
+                <Link to="/playlist/create">
+                    Criar Playlist
+                </Link>
+            </li>
+
         </SideMenu>
     </Aside>
   );

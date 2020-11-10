@@ -7,9 +7,8 @@ import { HeaderMenu, Nav } from './styles';
 
 function Header ({user, logout}){
     return(
-        <HeaderMenu>            
+        <HeaderMenu>     
             <div className="headerContainer">
-
                 <div className="headerBrand">
                     <Link to="/">
                         <img src={spotify_logo} alt={''}/>
@@ -22,7 +21,7 @@ function Header ({user, logout}){
                         <li><Link to="/help">Ajuda</Link></li>
                         <li className="separator">|</li>
                         {user ? <li><Link to="/" onClick={() => logout('')}>Logout</Link></li> : <><li><Link to="/signup">Inscreva-se</Link></li>
-                            <li><Link to="/signin">Login</Link></li> </>}                 
+                            <li><Link to="/signin">Entrar</Link></li> </>}                 
                     </ul>
                 </Nav>
 
