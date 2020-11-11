@@ -89,7 +89,7 @@ export const Banner = styled.div`
 
     .btnSavePlaylist{
         position: absolute;
-        right: 10px;
+        right: 20px;
         background-color: #fff;
         color: #181818;
         font-size: 12px;

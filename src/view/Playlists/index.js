@@ -14,7 +14,9 @@ export default class Playlists extends Component {
     }
     
     async componentDidMount(){
-        const { data } = await api.get('/playlists');
+        const { data } = await api.get('/playlists', {
+            params: { owner_id: 0 }
+        });
         this.setState({
             list: data
         });

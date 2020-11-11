@@ -2,7 +2,7 @@
   "playlists": [
     {
       "id": 1,
-      "owner_id": null,
+      "owner_id": 0,
       "nome": "This is Rolling Stones",
       "capa": "/images/cover/the_rolling_stones.jpeg",
       "descricao": "The Rolling Stones essencial tracks",
@@ -32,7 +32,7 @@
     },
     {
       "id": 2,
-      "owner_id": null,
+      "owner_id": 0,
       "nome": "This Is Guns N' Roses",
       "capa": "/images/cover/guns_and-roses.jpeg",
       "descricao": "The best of Guns N' Roses, all in one playlist.",
@@ -62,7 +62,7 @@
     },
     {
       "id": 3,
-      "owner_id": null,
+      "owner_id": 0,
       "nome": "This Is Legião Urbana",
       "capa": "/images/cover/legiao_urbana.jpeg",
       "descricao": "A banda criou diveros hinos do rock nacional. Relembre grandes sucessos de uma das maiores bandas da história da música brasileira.",
@@ -92,7 +92,7 @@
     },
     {
       "id": 4,
-      "owner_id": null,
+      "owner_id": 0,
       "nome": "This Is The Beatles",
       "capa": "/images/cover/the_beatles.jpeg",
       "descricao": "Come together to listen to their greatest hits.",
@@ -153,7 +153,7 @@
       "id": 6
     },
     {
-      "owner_id": 1,
+      "owner_id": 2,
       "nome": "Guns",
       "capa": "/images/cover/default_folder.png",
       "descricao": "Só Gus",
@@ -167,6 +167,84 @@
         }
       ],
       "id": 7
+    },
+    {
+      "owner_id": 2,
+      "nome": "My playlist 7",
+      "capa": "/images/cover/default_folder.png",
+      "descricao": "Teste",
+      "musicas": [
+        {
+          "id": 3,
+          "nome": "Living In A Ghost Town",
+          "cantor": "The Rolling Stones",
+          "duracao": "04:07",
+          "url_audio": "/audios/The Rolling Stones - Living In A Ghost Town.mp3"
+        }
+      ],
+      "id": 8
+    },
+    {
+      "owner_id": 2,
+      "nome": "Teste2",
+      "capa": "/images/cover/default_folder.png",
+      "descricao": "Nova playlist de teste",
+      "musicas": [
+        {
+          "id": 3,
+          "nome": "Living In A Ghost Town",
+          "cantor": "The Rolling Stones",
+          "duracao": "04:07",
+          "url_audio": "/audios/The Rolling Stones - Living In A Ghost Town.mp3"
+        }
+      ],
+      "id": 9
+    },
+    {
+      "owner_id": 2,
+      "nome": "My playlist 2",
+      "capa": "/images/cover/default_folder.png",
+      "descricao": "abciaobcikasjb",
+      "musicas": [
+        {
+          "id": 4,
+          "nome": "Paradise City",
+          "cantor": "Guns N' Roses",
+          "duracao": "04:30",
+          "url_audio": "/audios/Guns N Roses - Paradise City.mp3"
+        },
+        {
+          "id": 9,
+          "nome": "Pais e Filhos",
+          "cantor": "Legião Urbana",
+          "duracao": "04:07",
+          "url_audio": "/audios/Legião Urbana - Pais E Filhos.mp3"
+        }
+      ],
+      "id": 10
+    },
+    {
+      "owner_id": 2,
+      "nome": "My playlist 7",
+      "capa": "/images/cover/default_folder.png",
+      "descricao": "Teste Pklay",
+      "musicas": [
+        {
+          "id": 9,
+          "nome": "Pais e Filhos",
+          "cantor": "Legião Urbana",
+          "duracao": "04:07",
+          "url_audio": "/audios/Legião Urbana - Pais E Filhos.mp3"
+        },
+        {
+          "id": 4,
+          "nome": "Paradise City",
+          "cantor": "Guns N' Roses",
+          "duracao": "04:30",
+          "url_audio": "/audios/Guns N Roses - Paradise City.mp3"
+        }
+      ],
+      "id": 11
     }
   ],
   "users": [
@@ -179,20 +257,11 @@
       "gender": "NB"
     },
     {
-      "email": "jkdouglas21@gmail.com",
-      "nickname": "",
-      "password": "jkdouglas21@gmail.com",
-      "birthday": "2020-10-20",
-      "gender": "M",
+      "email": "jkdouglas2222@gmail.com",
+      "nickname": "Bernardo Feijão 2",
+      "password": "12345",
+      "birthday": "1985-11-12",
       "id": 2
-    },
-    {
-      "email": "jkdouglas21@gmail.com",
-      "nickname": "Douglas",
-      "password": "123456",
-      "birthday": "2020-10-20",
-      "gender": "M",
-      "id": 3
     }
   ]
 }

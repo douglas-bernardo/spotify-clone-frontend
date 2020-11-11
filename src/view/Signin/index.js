@@ -13,11 +13,13 @@ export default function Signin({login}) {
     const [isAuth, setIsAuth] = useState(false)
     const [isEmailInvalid, setEmailInvalid] = useState(false)
     const [isPasswordInvalid, setPasswordInvalid] = useState(false)
+
     async function handleSubmit(e) {
         e.preventDefault();
 
         await api.get(`/users?email=${email}`).then( res => {
             const { data } = res
+            
             if(data.length === 1){
                 if(data[0].password === password) {
                     login(data[0])
@@ -33,7 +35,7 @@ export default function Signin({login}) {
 
     return(
         <Section>
-            {isAuth ? <Redirect to={''} /> : null}
+            {isAuth ? <Redirect to={'/collection'} /> : null}
             <div className="headerSignup">
                 <Link to={''}>
                 <Logo />
