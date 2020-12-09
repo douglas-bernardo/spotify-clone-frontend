@@ -11,7 +11,7 @@ import api from '../../services/api';
 import { Panel } from './styles';
 
 export default function AcountOverview() {
-    const [currentUser, setCurrentUser] = useState({});
+    //const [currentUser, setCurrentUser] = useState({});
 
     const [email, setEmail] = useState('');
     const [nickname, setNickName] = useState('');
@@ -22,7 +22,7 @@ export default function AcountOverview() {
             
         const user = JSON.parse(localStorage.getItem("@spotify/user"));
 
-        api.get(`/users/${user.id}`).then(response => {
+        api.get(`/users/${user._id}`).then(response => {
 
             const user_data = response.data;
             setEmail(user_data.email);

@@ -25,9 +25,8 @@ export default class Playlist extends Component {
     const { match } = this.props;
     const playlist_id = match.params.id;
 
-    // pega as informações da api via get 
     const { data } = await api.get(`/playlists/${playlist_id}`);
-
+    
     this.setState({
       playlist: data,
       player: createRef()
@@ -45,7 +44,6 @@ export default class Playlist extends Component {
   }
 
   audiofunction = () => {
-    console.log(this.state.player.current.audio.current.currentTime);
     this.state.play ? this.state.player.current.audio.current.play() : this.state.player.current.audio.current.pause(); 
   };  
   
@@ -74,7 +72,6 @@ export default class Playlist extends Component {
               <AudioPlayer
                 autoPlayAfterSrcChange={false}                
                 src={this.state.currentStreamAudio}
-                onPlay={e => console.log("onPlay")}
                 ref={this.state.player}
               />
 
@@ -93,9 +90,9 @@ export default class Playlist extends Component {
                     </thead>
                     <tbody>
                       {(musicas) &&
-                        musicas.map(m =>(
+                        musicas.map((m, index) =>(
                           <tr key={m.id} onClick={() => this.togglePlay(m.id, m.url_audio)}>
-                            <td>{m.id}</td>
+                            <td>{index+1}</td>
                             <td>{m.nome}</td>
                             <td>{m.cantor}</td>
                             <td>{(this.state.play && m.id === this.state.currentIdStream) ? <span id="status_music">Reproduzindo...</span> : m.duracao}</td>  

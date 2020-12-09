@@ -14,11 +14,12 @@ export default class Playlists extends Component {
     }
     
     async componentDidMount(){
-        const { data } = await api.get('/playlists', {
-            params: { owner_id: 0 }
-        });
+        const { data } = await api.get('/playlists');
+
+        const playlistFiltered = data.filter(p => p.owner_id === null);
+
         this.setState({
-            list: data
+            list: playlistFiltered
         });
     }
 
@@ -36,8 +37,8 @@ export default class Playlists extends Component {
                         </div>
                         <div className="list-genero">
                             {list.map(item =>(
-                                <Link to={`/playlist/${item.id}`} title={item.descricao} key={item.id}>
-                                    <Item key={item.id}>
+                                <Link to={`/playlist/${item._id}`} title={item.descricao} key={item._id}>
+                                    <Item key={item._id}>
                                         <div>
                                             <img src={item.capa} alt={''}/>
                                             <h3>{item.nome}</h3>

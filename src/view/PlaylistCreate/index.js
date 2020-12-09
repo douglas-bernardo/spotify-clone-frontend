@@ -32,7 +32,7 @@ export default function PlaylistCreate() {
             // array de resultados
             const playlists = response.data;
 
-            const playlistFiltered = playlists.filter(p => p.owner_id === 0);
+            const playlistFiltered = playlists.filter(p => p.owner_id === null);
 
             playlistFiltered.forEach(pf => {
                 pf.musicas.forEach(m => {
@@ -52,7 +52,7 @@ export default function PlaylistCreate() {
                 setSearchResults(results);
             }
         }
-    }, [searchTerm])
+    }, [availableMusics, searchTerm])
 
     function handleAddMusic(id) {
         const selected = availableMusics.filter(music => music.id === id);
@@ -86,7 +86,7 @@ export default function PlaylistCreate() {
         const user = JSON.parse(localStorage.getItem("@spotify/user"));
         
         const data = {
-            owner_id: user.id,
+            owner_id: user._id,
             nome: name,
             capa: '/images/cover/default_folder.png',
             descricao: description ? description : '',
@@ -116,7 +116,6 @@ export default function PlaylistCreate() {
                                 </div>
                             </div>
                             <div className="formCreatePanel">
-                            {console.log(name)}
                                 <Form>
                                     <Form.Group controlId="playListName" autoComplete="off">
                                         <Form.Label>Nome</Form.Label>

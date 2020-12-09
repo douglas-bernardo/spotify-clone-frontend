@@ -245,6 +245,22 @@
         }
       ],
       "id": 11
+    },
+    {
+      "owner_id": 3,
+      "nome": "My playlist 1",
+      "capa": "/images/cover/default_folder.png",
+      "descricao": "My playlist 1",
+      "musicas": [
+        {
+          "id": 9,
+          "nome": "Pais e Filhos",
+          "cantor": "Legião Urbana",
+          "duracao": "04:07",
+          "url_audio": "/audios/Legião Urbana - Pais E Filhos.mp3"
+        }
+      ],
+      "id": 12
     }
   ],
   "users": [
@@ -257,11 +273,19 @@
       "gender": "NB"
     },
     {
-      "email": "jkdouglas2222@gmail.com",
-      "nickname": "Bernardo Feijão 2",
+      "email": "jkdouglas21@gmail.com",
+      "nickname": "Bernardo Feijão",
       "password": "12345",
       "birthday": "1985-11-12",
       "id": 2
+    },
+    {
+      "email": "jacksondouglas@edu.unifor.br",
+      "nickname": "Douglas",
+      "password": "123",
+      "birthday": "1985-12-11",
+      "gender": "M",
+      "id": 3
     }
   ]
 }

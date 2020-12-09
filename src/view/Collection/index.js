@@ -16,21 +16,11 @@ export default function Collection() {
         setCurrentUser(JSON.parse(localStorage.getItem("@spotify/user")));
         const user = JSON.parse(localStorage.getItem("@spotify/user"));
         if (user)
-        api.get(`/playlists`, {
-            params: { owner_id: user.id }
-        }).then(response => {
+        api.get(`/playlists/owner/${user._id}`)
+            .then(response => {
             setCollection(response.data);        
         })
     },[]);
-
-    // useEffect(() => {
-    //     if (currentUser)
-    //         api.get('/playlists', {
-    //             params: { owner_id: currentUser.id }
-    //         }).then(response => {
-    //             setCollection(response.data);
-    //         });
-    // }, [currentUser]);
 
     return (
         <Container>
@@ -49,7 +39,7 @@ export default function Collection() {
                                 </div>
                                 <div className="list-genero">
                                     {collection.map(item => (
-                                        <Link to={`/playlist/${item.id}`} title={item.descricao} key={item.id}>
+                                        <Link to={`/playlist/${item._id}`} title={item.descricao} key={item._id}>
                                             <Item key={item.id}>
                                                 <div>
                                                     <img src={item.capa} alt={''} />

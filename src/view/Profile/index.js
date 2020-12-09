@@ -21,17 +21,14 @@ export default function Profile() {
     const [birthday, setBirthday] = useState('');
 
     // inicia primeiro  
-
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem("@spotify/user"));
 
-        // http://localhost:3004/users/2
-
-        api.get(`/users/${user.id}`).then(response => {
+        api.get(`/users/${user._id}`).then(response => {
 
             const user_data = response.data;
 
-            setUserId(user_data.id);
+            setUserId(user_data._id);
             setEmail(user_data.email);
             setNickName(user_data.nickname);
             setBirthday(user_data.birthday);
